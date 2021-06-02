@@ -127,7 +127,7 @@ func TestResourceServicePrincipalCreate(t *testing.T) {
 				ExpectedRequest: ScimUser{
 					DisplayName: "Example Service Principal",
 					Active:      true,
-					Entitlements: []entitlementsListItem{
+					Entitlements: []valueItem{
 						{
 							Value: "allow-cluster-create",
 						},
@@ -147,7 +147,7 @@ func TestResourceServicePrincipalCreate(t *testing.T) {
 					Active:        true,
 					ApplicationID: "00000000-0000-0000-0000-000000000000",
 					ID:            "abc",
-					Entitlements: []entitlementsListItem{
+					Entitlements: []valueItem{
 						{
 							Value: AllowClusterCreateEntitlement,
 						},
@@ -206,7 +206,7 @@ func TestResourceServicePrincipalUpdate(t *testing.T) {
 		DisplayName:   "Changed Name",
 		ApplicationID: "00000000-0000-0000-0000-000000000000",
 		Active:        true,
-		Entitlements: []entitlementsListItem{
+		Entitlements: []valueItem{
 			{
 				Value: AllowInstancePoolCreateEntitlement,
 			},
@@ -232,7 +232,7 @@ func TestResourceServicePrincipalUpdate(t *testing.T) {
 					Active:        true,
 					ApplicationID: "00000000-0000-0000-0000-000000000000",
 					ID:            "abc",
-					Entitlements: []entitlementsListItem{
+					Entitlements: []valueItem{
 						{
 							Value: AllowClusterCreateEntitlement,
 						},
@@ -311,7 +311,7 @@ func TestResourceServicePrincipalUpdate_ErrorPut(t *testing.T) {
 					Active:        true,
 					ApplicationID: "00000000-0000-0000-0000-000000000000",
 					ID:            "abc",
-					Entitlements: []entitlementsListItem{
+					Entitlements: []valueItem{
 						{
 							Value: AllowClusterCreateEntitlement,
 						},
